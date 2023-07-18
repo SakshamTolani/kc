@@ -85,6 +85,7 @@ s3transfer==0.6.0
 six==1.16.0
 soupsieve==2.2.1
 sqlparse==0.4.1
+sendgrid
 stringcase==1.2.0
 template==0.7.2
 typing-extensions==3.10.0.0
