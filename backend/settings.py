@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-0_=_rb#=9(&-xt54_y0gjkf!q637e%z7cyp=hm(akwhwcayi1^
 DEBUG = True
 
 ALLOWED_HOSTS = ['laptop-i6go4tfg', '127.0.0.1',
-                 'localhost', 'kamsincollection.herokuapp.com', '.vercel.app']
+                 'localhost', 'kamsincollection.herokuapp.com']
 
 
 # Application definition
