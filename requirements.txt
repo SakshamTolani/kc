@@ -60,7 +60,7 @@ Pillow
 pipwin==0.5.1
 platformdirs==2.2.0
 portalocker==2.3.2
-psycopg2
+#psycopg2
 PyAutoGUI==0.9.53
 pycodestyle==2.7.0
 pycryptodome==3.14.1
