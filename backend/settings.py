@@ -122,9 +122,9 @@ TEMPLATES = [
 
 # WSGI_APPLICATION = 'backend.wsgi.application'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'mail.kamsincollection.in'
-# EMAIL_HOST_USER = 'team@kamsincollection.in'
-# EMAIL_HOST_PASSWORD = 'Mahskashish<3'
+# EMAIL_HOST = '*****'
+# EMAIL_HOST_USER = '*****'
+# EMAIL_HOST_PASSWORD = '*******'
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
@@ -133,10 +133,10 @@ TEMPLATES = [
 # EMAIL_USE_TLS = True
 # EMAIL_PORT = 587
 # EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'kamsincollection@gmail.com'
-# EMAIL_HOST_PASSWORD = 'nzilzemtjpllepbz'
+# EMAIL_HOST_USER = '******'
+# EMAIL_HOST_PASSWORD = '*****'
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-SENDGRID_API_KEY = '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'
+SENDGRID_API_KEY = os.environ['SENDGRID_API']
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'  # this is exactly the value 'apikey'
 EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
@@ -144,9 +144,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # WSGI_APPLICATION = 'backend.wsgi.application'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'mail.kamsincollection.in'
-# EMAIL_HOST_USER = 'team@kamsincollection.in'
-# EMAIL_HOST_PASSWORD = 'Mahskashish<3'
 # EMAIL_PORT = 465
 # EMAIL_USE_TLS = True
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
@@ -161,17 +158,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'kamsin',
-#         'USER': 'postgres',
-#         'PASSWORD': os.environ.get('DB_PASS'),
-#         'HOST': 'localhost',
-#         'PORT': '5432'
-#     }
-# }
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
@@ -242,9 +228,9 @@ AWS_S3_ACCESS_KEY_ID = ""
 # AWS_S3_SECRET_ACCESS_KEY = os.environ.get('AWS_S3_SECRET_ACCESS_KEY')
 AWS_S3_SECRET_ACCESS_KEY = ""
 
-AWS_STORAGE_BUCKET_NAME = 'kamsincollection'
+AWS_STORAGE_BUCKET_NAME = os.environ.get('BUCKET')
 
-# AWS_S3_CUSTOM_DOMAIN = 'd335r3txcckbzx.cloudfront.net'
+# AWS_S3_CUSTOM_DOMAIN = os.environ.get('DOMAIN')
 
 AWS_S3_REGION_NAME = "ap-south-1"
 
